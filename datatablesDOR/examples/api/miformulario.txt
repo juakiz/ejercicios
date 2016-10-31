@@ -1,0 +1,112 @@
+{
+    "data": [
+        {
+            "NIF": "42000000",
+            "nombre": "System Architect",
+            "correo": "$320,800",
+            "provincia": "2011\/04\/25",
+            "municipio": "Edinburgh",
+            "direccion": "algo",
+            "provincia": "5421"
+        },
+        {
+            "NIF": "42000001",
+            "nombre": "Accountant",
+            "correo": "$170,750",
+            "provincia": "2011\/07\/25",
+            "municipio": "Tokyo",
+            "direccion": "algo",
+            "provincia": "8422"
+        },
+        {
+            "NIF": "42000002",
+            "nombre": "Junior Technical Author",
+            "correo": "$86,000",
+            "provincia": "2009\/01\/12",
+            "municipio": "San Francisco",
+            "direccion": "algo",
+            "provincia": "1562"
+        },
+        {
+            "NIF": "42000003",
+            "nombre": "Senior Javascript Developer",
+            "correo": "$433,060",
+            "provincia": "2012\/03\/29",
+            "municipio": "Edinburgh",
+            "direccion": "algo",
+            "provincia": "6224"
+        },
+        {
+            "NIF": "42000004",
+            "nombre": "Accountant",
+            "correo": "$162,700",
+            "provincia": "2008\/11\/28",
+            "municipio": "Tokyo",
+            "direccion": "algo",
+            "provincia": "5407"
+        },
+        {
+            "NIF": "42000005",
+            "nombre": "Integration Specialist",
+            "correo": "$372,000",
+            "provincia": "2012\/12\/02",
+            "municipio": "New York",
+            "direccion": "algo",
+            "provincia": "4804"
+        },
+        {
+            "NIF": "42000006",
+            "nombre": "Sales Assistant",
+            "correo": "$137,500",
+            "provincia": "2012\/08\/06",
+            "municipio": "San Francisco",
+            "direccion": "algo",
+            "provincia": "9608"
+        },
+        {
+            "NIF": "42000007",
+            "nombre": "Integration Specialist",
+            "correo": "$327,900",
+            "provincia": "2010\/10\/14",
+            "municipio": "Tokyo",
+            "direccion": "algo",
+            "provincia": "6200"
+        },
+        {
+            "NIF": "42000008",
+            "nombre": "Javascript Developer",
+            "correo": "$205,500",
+            "provincia": "2009\/09\/15",
+            "municipio": "San Francisco",
+            "direccion": "algo",
+            "provincia": "2360"
+        },
+        {
+            "NIF": "42000009",
+            "nombre": "Software Engineer",
+            "correo": "$103,600",
+            "provincia": "2008\/12\/13",
+            "municipio": "Edinburgh",
+            "direccion": "algo",
+            "provincia": "1667"
+        },
+        {
+            "NIF": "42000010",
+            "nombre": "municipio Manager",
+            "correo": "$90,560",
+            "provincia": "2008\/12\/19",
+            "municipio": "London",
+            "direccion": "algo",
+            "provincia": "3814"
+        },
+        {
+            "NIF": "42000011",
+            "nombre": "Support Lead",
+            "correo": "$342,000",
+            "provincia": "2013\/03\/03",
+            "municipio": "Edinburgh",
+            "direccion": "algo",
+            "provincia": "9497"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+nombre 
+apellidos
+nif
+tlf
+correo
+rep correo
+dir
+prov
+municipio*
+boton disabled

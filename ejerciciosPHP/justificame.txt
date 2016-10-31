@@ -1,0 +1,7 @@
+Hola, soy un simple archivo
+de texto. He sido creado como
+ejemplo para probar el programa que
+hay que crear como simulacro de
+examen practico.
+Tras ejecutar el programa, todo mi texto
+quedara justificado hacia la derecha.

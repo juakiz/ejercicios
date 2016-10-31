@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type ="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+<div style="border: 1px solid black;padding:10px;">
+
+
+  First name: <input type="text" id="name"><br>
+  Last name: <input type="text" id="lastname">
+  Provincia:  
+  <select id="provincia"></select>
+</div>
+
+<p>Click an input field to get focus. Click outside an input field to lose focus.</p>
+
+</body>
+
+ <script type="text/JavaScript">
+    //get a reference to the select element
+    var $select = $('#provincia');
+    //alert("var select: "+$select);
+    $.getJSON('provincias.json', function(data){
+    $select.html('');
+    $.each(data.provincias, function(key, val){ 
+       $select.append('<option id="' + val.id + '">' + val.name + '</option>');
+    })
+   });
+  </script>
+  
+</html>
+

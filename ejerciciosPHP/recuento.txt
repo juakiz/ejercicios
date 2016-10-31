@@ -1,0 +1,7 @@
+Hola, soy un simple archivo
+de texto. He sido creado como
+ejemplo para probar el programa que
+hay que crear como simulacro de
+examen práctico.
+Tengo 7 líneas, 36 palabras, XX
+caracteres y 22 letras a/A.
