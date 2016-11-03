@@ -1,0 +1,386 @@
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="./css/algo.css" rel="stylesheet" type="text/css">
+    <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css"/>-->
+    <link rel="stylesheet" href="../dist/css/bootstrapValidator.css"/>
+
+    <script type="text/javascript" src="./bootstrapvalidator/vendor/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./bootstrapvalidator/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
+
+    <!--<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript" src="./bootstrapvalidator/dist/js/bootstrapValidator.js"></script>-->
+
+    <script type="text/javascript" src="./js/pselect.js"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">-->
+    <!--<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <!--<link rel="stylesheet" href="./bootstrapvalidator/dist/css/bootstrapValidator.min.css"/>-->
+    <!--<script type="text/javascript" src="https://cdnjs.com/libraries/1000hz-bootstrap-validator"></script>-->
+ </head>
+  <body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span>Brand</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">SERVER HOSTING</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container" id="principal">
+        <div class="row">
+
+          <!-- Formulario -->
+          <div class="col-md-8" id="formu">
+          	<h2>Solicítalo</h2>
+			  <form id="defaultForm" id="myForm" class="form-horizontal">
+			    <div class="form-group">
+			      <label class="control-label col-sm-2" for="nombre">Nombre:</label>
+			      <div class="col-sm-10">
+			        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+			      </div>
+			    </div>
+
+			    <div class="form-group">
+			      <label class="control-label col-sm-2" for="apellidos">Apellidos:</label>
+			      <div class="col-sm-10">
+			        <input type="text" class="form-control" id="apellidos" placeholder="Introduce tus apellidos">
+			      </div>
+			    </div>
+
+			    <div class="form-group">
+			      <label class="control-label col-sm-2" for="NIF">NIF:</label>
+			      <div class="col-sm-10">
+			        <input type="text" class="form-control" id="NIF" placeholder="Introduce tu NIF">
+			      </div>
+			    </div>
+
+			    <div class="form-group">
+			      <label class="control-label col-sm-2" for="tlf">Teléfono:</label>
+			      <div class="col-sm-10">
+			        <input type="text" class="form-control" id="tlf" placeholder="Introduce tu teléfono">
+			      </div>
+			    </div>
+
+			    <div class="form-group">
+			      <label class="control-label col-sm-2" for="email">Email:</label>
+			      <div class="col-sm-10">
+			        <input type="email" class="form-control" id="email" placeholder="Introduce tu correo electrónico">
+			      </div>
+			    </div>
+
+			    <div class="form-group">
+			      <label class="control-label col-sm-2" for="email2">Repetir email:</label>
+			      <div class="col-sm-10">
+			        <input type="email" class="form-control" id="email2" placeholder="Repite tu correo electrónico">
+			      </div>
+			    </div>
+
+			    <div class="form-group">
+			      <label class="control-label col-sm-2" for="tlf">Dirección:</label>
+			      <div class="col-sm-10">
+			        <input type="text" class="form-control" id="tlf" placeholder="Introduce tu dirección">
+			      </div>
+			    </div>
+
+			    <div class="form-group">
+			      <label class="control-label col-sm-2" for="prov">Provincia:</label>
+			      <div class="col-sm-10">
+			        <select class="form-control ps-prov" id="prov"></select>
+			      </div>
+			    </div>
+
+			    <div class="form-group">
+			      <label class="control-label col-sm-2" for="munic">Municipio:</label>
+			      <div class="col-sm-10">
+			        <select class="form-control ps-mun" id="munic"></select>
+			      </div>
+			    </div>
+
+			    <div class="form-group">
+			      <div class="col-sm-offset-2 col-sm-10">
+			        <button type="submit" class="btn btn-default">Enviar</button>
+			      </div>
+			    </div>
+			  </form>
+          </div>
+          <!-- Fin Formulario -->
+
+          <!-- Columna 1 -->
+          <div class="col-md-4" id="co1">
+            <h3 class="text-center">FREE</h3>
+            <img src="./img/server1.png" class="center-block img-responsive">
+            <div class="col-md-12">
+              <ul>
+                <li>Lorem ipsum dolor sit amet,</li>
+                <li>consectetur adipisici elit</li>
+                <li>sed eiusmod tempor incidunt</li>
+                <li>ut labore et dolore magna aliqua.</li>
+                <li>Ut enim ad minim veniam,</li>
+                <li>quis nostrud</li>
+              </ul>
+            </div>
+            <div class="circle">
+              <p class="text-center">0€</p>
+            </div>
+          </div>
+
+          <!-- Columna 2 -->
+          <div class="col-md-4" id="co2">
+            <h3 class="text-center">PREMIUM</h3>
+            <img src="./img/server2.png" class="center-block img-responsive">
+            <div class="col-md-12">
+              <ul>
+                <li>Lorem ipsum dolor sit amet,</li>
+                <li>consectetur adipisici elit</li>
+                <li>sed eiusmod tempor incidunt</li>
+                <li>ut labore et dolore magna aliqua.</li>
+                <li>Ut enim ad minim veniam,</li>
+                <li>quis nostrud</li>
+              </ul>
+            </div>
+            <div class="circle">
+              <p class="text-center">50€</p>
+            </div>
+          </div>
+
+          <!-- Columna 3 -->
+          <div class="col-md-4" id="co3">
+            <h3 class="text-center">PREMIUM++</h3>
+            <img src="./img/server3.png" class="center-block img-responsive">
+            <div class="col-md-12">
+              <ul>
+                <li>Lorem ipsum dolor sit amet,</li>
+                <li>consectetur adipisici elit</li>
+                <li>sed eiusmod tempor incidunt</li>
+                <li>ut labore et dolore magna aliqua.</li>
+                <li>Ut enim ad minim veniam,</li>
+                <li>quis nostrud</li>
+              </ul>
+            </div>
+            <div class="circle">
+              <p class="text-center">75€</p>
+            </div>
+          </div>
+          <!-- Fin columnas -->
+
+        </div>
+      </div>
+    </div>
+    <footer class="section section-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>Footer header</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
+              <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+              <br>Ut enim ad minim veniam, quis nostrud</p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-info text-right">
+              <br>
+              <br>
+            </p>
+            <div class="row">
+              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 hidden-xs text-right">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+
+    // JQuery
+		$(document).ready(function(){
+            $("#co1").click(function(){
+                $("#co2,#co3").toggle();
+                $("#formu").toggle();
+            });
+            $("#co2").click(function(){
+                $("#co1,#co3").toggle();
+                $("#formu").toggle();
+            });
+            $("#co3").click(function(){
+                $("#co1,#co2").toggle(),
+                $("#formu").toggle();
+            });
+        });
+
+        // Plugin de validacion
+        $(document).ready(function() {
+            $('#defaultForm').bootstrapValidator({
+                message: 'Valor inválido',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    nombre: {
+                        message: 'Nombre inválido',
+                        validators: {
+                            notEmpty: {
+                                message: 'Se necesita el nombre, este campo no puede estar vacío.'
+                            /*},
+                            stringLength: {
+                                min: 6,
+                                max: 30,
+                                message: 'The username must be more than 6 and less than 30 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9_\.]+$/,
+                                message: 'The username can only consist of alphabetical, number, dot and underscore'
+                                */
+                            }
+                        }
+                    },
+                    country: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The country is required and can\'t be empty'
+                            }
+                        }
+                    },
+                    acceptTerms: {
+                        validators: {
+                            notEmpty: {
+                                message: 'You have to accept the terms and policies'
+                            }
+                        }
+                    },
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The email address is required and can\'t be empty'
+                            },
+                            emailAddress: {
+                                message: 'The input is not a valid email address'
+                            }
+                        }
+                    },
+                    website: {
+                        validators: {
+                            uri: {
+                                message: 'The input is not a valid URL'
+                            }
+                        }
+                    },
+                    phoneNumber: {
+                        validators: {
+                            digits: {
+                                message: 'The value can contain only digits'
+                            }
+                        }
+                    },
+                    color: {
+                        validators: {
+                            hexColor: {
+                                message: 'The input is not a valid hex color'
+                            }
+                        }
+                    },
+                    zipCode: {
+                        validators: {
+                            zipCode: {
+                                country: 'US',
+                                message: 'The input is not a valid US zip code'
+                            }
+                        }
+                    },
+                    password: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The password is required and can\'t be empty'
+                            },
+                            identical: {
+                                field: 'confirmPassword',
+                                message: 'The password and its confirm are not the same'
+                            }
+                        }
+                    },
+                    confirmPassword: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The confirm password is required and can\'t be empty'
+                            },
+                            identical: {
+                                field: 'password',
+                                message: 'The password and its confirm are not the same'
+                            }
+                        }
+                    },
+                    ages: {
+                        validators: {
+                            lessThan: {
+                                value: 100,
+                                inclusive: true,
+                                message: 'The ages has to be less than 100'
+                            },
+                            greaterThan: {
+                                value: 10,
+                                inclusive: false,
+                                message: 'The ages has to be greater than or equals to 10'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+
+	    // Ajax
+	    /*var $select = $('#prov');
+	    $.getJSON('provincias.json', function(data){
+	    	$select.html('');
+	    	$.each(data.provincias, function(key, val){
+				$select.append('<option id="' + val.id + '">' + val.name + '</option>');
+			})
+		});*/
+
+    </script>
+
+</body>
+</html>
