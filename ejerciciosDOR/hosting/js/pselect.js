@@ -40768,7 +40768,7 @@ $().ready(function() {
 	$(provinceCssSelector).change(function() {
 		// Cuando cambie la provincia almacena el value del option seleccionado
 		var selectedProvince = this.value;
-		// Obviamente hay que resetear el municipio cada vez que cambie la provincia de seleccion
+		// Hay que resetear el municipio cada vez que cambie la provincia de seleccion
 		$(municipeCssSelector).empty();
 		$(municipeCssSelector).append($('<option>').text(municipeDefaultText).attr('value', ""));
 		$.each(municipes, function(number, municipe) {
@@ -40781,3 +40781,4 @@ $().ready(function() {
 });
 
 }());
+¡

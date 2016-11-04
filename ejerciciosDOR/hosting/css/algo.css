@@ -8,12 +8,38 @@
 */
 /* Add custom CSS classes here */
 
+/* Estilos generales */
+
 .breadcrumb{
   margin-bottom: 0 !important;
 }
 
 h3 {
   margin-bottom: 55px !important;
+}
+
+/* Formulario */
+
+#formu{
+  display: none;
+}
+
+/* Cajitas centrales */
+
+.caja {
+  margin: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+
+  transition: box-shadow 0.5s ease;
+
+  /*transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;*/
+}
+
+.caja:hover {
+
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 /* Search Bar */
@@ -71,6 +97,7 @@ h3 {
 
 
 /* Parallax Jumbotron */
+
 .bg {
   background: url('../img/nubes1.jpg') no-repeat center center;
   position: fixed;
@@ -88,13 +115,8 @@ h3 {
   background:transparent !important;
 }
 
-/* Formulario */
-
-#formu{
-  display:none;
-}
-
 /* Numeros redondeados */
+
 .block {
   border: 5px solid #337cbb;
   text-align: center;
@@ -115,6 +137,7 @@ h3 {
   vertical-align: middle;
   display: table-cell;
 }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;

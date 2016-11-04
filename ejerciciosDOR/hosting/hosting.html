@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="./img/simple-server.png" rel="icon">
+    <link href="./img/favicon.png" rel="icon">
 
     <link href="./css/algo.css" rel="stylesheet" type="text/css">
     <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">-->
@@ -44,7 +44,7 @@
               <a href="#">Inicio</a>
             </li>
             <li>
-              <a href="#">Contactos</a>
+              <a href="#">Contacto</a>
             </li>
           </ul>
         </div>
@@ -157,58 +157,64 @@
 
           <!-- Columna 1 -->
           <div class="col-md-4" id="co1">
-            <h3 class="text-center">FREE</h3>
-            <img src="./img/server1.png" class="center-block img-responsive">
-            <div class="col-md-12">
-              <ul>
-                <li>Lorem ipsum dolor sit amet,</li>
-                <li>consectetur adipisici elit</li>
-                <li>sed eiusmod tempor incidunt</li>
-                <li>ut labore et dolore magna aliqua.</li>
-                <li>Ut enim ad minim veniam,</li>
-                <li>quis nostrud</li>
-              </ul>
-            </div>
-            <div class="circle">
-              <p class="text-center">0€</p>
+            <div class="caja" id="caja1">
+              <h3 class="text-center">FREE</h3>
+              <img src="./img/server1.png" class="center-block img-responsive">
+              <div class="col-md-12">
+                <ul>
+                  <li>Lorem ipsum dolor sit amet,</li>
+                  <li>consectetur adipisici elit</li>
+                  <li>sed eiusmod tempor incidunt</li>
+                  <li>ut labore et dolore magna aliqua.</li>
+                  <li>Ut enim ad minim veniam,</li>
+                  <li>quis nostrud</li>
+                </ul>
+              </div>
+              <div class="circle">
+                <p class="text-center">0€</p>
+              </div>
             </div>
           </div>
 
           <!-- Columna 2 -->
           <div class="col-md-4" id="co2">
-            <h3 class="text-center">PREMIUM</h3>
-            <img src="./img/server2.png" class="center-block img-responsive">
-            <div class="col-md-12">
-              <ul>
-                <li>Lorem ipsum dolor sit amet,</li>
-                <li>consectetur adipisici elit</li>
-                <li>sed eiusmod tempor incidunt</li>
-                <li>ut labore et dolore magna aliqua.</li>
-                <li>Ut enim ad minim veniam,</li>
-                <li>quis nostrud</li>
-              </ul>
-            </div>
-            <div class="circle">
-              <p class="text-center">50€</p>
+            <div class="caja" id="caja2">
+              <h3 class="text-center">PREMIUM</h3>
+              <img src="./img/server2.png" class="center-block img-responsive">
+              <div class="col-md-12">
+                <ul>
+                  <li>Lorem ipsum dolor sit amet,</li>
+                  <li>consectetur adipisici elit</li>
+                  <li>sed eiusmod tempor incidunt</li>
+                  <li>ut labore et dolore magna aliqua.</li>
+                  <li>Ut enim ad minim veniam,</li>
+                  <li>quis nostrud</li>
+                </ul>
+              </div>
+              <div class="circle">
+                <p class="text-center">50€</p>
+              </div>
             </div>
           </div>
 
           <!-- Columna 3 -->
           <div class="col-md-4" id="co3">
-            <h3 class="text-center">PREMIUM++</h3>
-            <img src="./img/server3.png" class="center-block img-responsive">
-            <div class="col-md-12">
-              <ul>
-                <li>Lorem ipsum dolor sit amet,</li>
-                <li>consectetur adipisici elit</li>
-                <li>sed eiusmod tempor incidunt</li>
-                <li>ut labore et dolore magna aliqua.</li>
-                <li>Ut enim ad minim veniam,</li>
-                <li>quis nostrud</li>
-              </ul>
-            </div>
-            <div class="circle">
-              <p class="text-center">75€</p>
+            <div class="caja" id="caja3">
+              <h3 class="text-center">PREMIUM++</h3>
+              <img src="./img/server3.png" class="center-block img-responsive">
+              <div class="col-md-12">
+                <ul>
+                  <li>Lorem ipsum dolor sit amet,</li>
+                  <li>consectetur adipisici elit</li>
+                  <li>sed eiusmod tempor incidunt</li>
+                  <li>ut labore et dolore magna aliqua.</li>
+                  <li>Ut enim ad minim veniam,</li>
+                  <li>quis nostrud</li>
+                </ul>
+              </div>
+              <div class="circle">
+                <p class="text-center">75€</p>
+              </div>
             </div>
           </div>
           <!-- Fin columnas -->
@@ -233,8 +239,7 @@
               <div class="col-md-4 col-md-offset-8">
                   <form action="" class="search-form">
                       <div class="form-group has-feedback">
-                      <label for="search" class="sr-only">Search</label>
-                      <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                      <input type="text" class="form-control" name="search" id="search" placeholder="buscar...">
                         <span class="glyphicon glyphicon-search form-control-feedback"></span>
                     </div>
                   </form>
@@ -274,30 +279,31 @@
     <script>
 
     // Parallax
+    $(document).ready(function(){
+          var jumboHeight = $('.jumbotron').outerHeight();
+          function parallax(){
+              var scrolled = $(window).scrollTop();
+              $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+          }
 
-    var jumboHeight = $('.jumbotron').outerHeight();
-    function parallax(){
-        var scrolled = $(window).scrollTop();
-        $('.bg').css('height', (jumboHeight-scrolled) + 'px');
-    }
-
-    $(window).scroll(function(e){
-        parallax();
+          $(window).scroll(function(e){
+              parallax();
+          });
     });
 
     // JQuery
 		$(document).ready(function(){
-            $("#co1").click(function(){
-                $("#co2,#co3").toggle();
-                $("#formu").toggle();
+            $("#caja1").click(function(){
+                $("#co2,#co3").toggle("slow");
+                $("#formu").toggle("slow");
             });
-            $("#co2").click(function(){
-                $("#co1,#co3").toggle();
-                $("#formu").toggle();
+            $("#caja2").click(function(){
+                $("#co1,#co3").toggle("slow");
+                $("#formu").toggle("slow");
             });
-            $("#co3").click(function(){
-                $("#co1,#co2").toggle(),
-                $("#formu").toggle();
+            $("#caja3").click(function(){
+                $("#co1,#co2").toggle("slow"),
+                $("#formu").toggle("slow");
             });
         });
 
