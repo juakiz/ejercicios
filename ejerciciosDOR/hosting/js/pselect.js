@@ -40747,15 +40747,15 @@ var municipes = [{
 
 var provinceCssSelector = '.ps-prov';
 var municipeCssSelector = '.ps-mun';
-var provinceDefaultText = 'Introduce tu provincia';
-var municipeDefaultText = 'Introduce tu municipio';
+var provinceDefaultText = ' -- Introduce tu provincia --';
+var municipeDefaultText = ' -- Introduce tu municipio --';
 
 
 $().ready(function() {
 	// Establece el texto por defecto (**DefaultText) y value (-1)
 	// .append y .text añade texto despues de option, .attr añade el atributo value y valor -1
-	$(provinceCssSelector).append($('<option>').text(provinceDefaultText).attr('value', -1));
-	$(municipeCssSelector).append($('<option>').text(municipeDefaultText).attr('value', -1));
+	$(provinceCssSelector).append($('<option>').text(provinceDefaultText).attr('value', ""));
+	$(municipeCssSelector).append($('<option>').text(municipeDefaultText).attr('value', ""));
 
 	// Publica el select de provincias
 	// utilizando el $.each recorremos el json provinces, pudiendo acceder
@@ -40770,7 +40770,7 @@ $().ready(function() {
 		var selectedProvince = this.value;
 		// Obviamente hay que resetear el municipio cada vez que cambie la provincia de seleccion
 		$(municipeCssSelector).empty();
-		$(municipeCssSelector).append($('<option>').text(municipeDefaultText).attr('value', -1));
+		$(municipeCssSelector).append($('<option>').text(municipeDefaultText).attr('value', ""));
 		$.each(municipes, function(number, municipe) {
 			// Pintame solo los municipios que coincidan con el codigo de la provincia:
 			if (municipe.cod_prov == selectedProvince) {

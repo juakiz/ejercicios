@@ -3,14 +3,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="./img/simple-server.png" rel="icon">
 
     <link href="./css/algo.css" rel="stylesheet" type="text/css">
     <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">-->
     <!--<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css"/>-->
-    <link rel="stylesheet" href="../dist/css/bootstrapValidator.css"/>
+    <link rel="stylesheet" href="./bootstrapvalidator/dist/css/bootstrapValidator.css"/>
 
     <script type="text/javascript" src="./bootstrapvalidator/vendor/jquery/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="./bootstrapvalidator/js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="./bootstrapvalidator/js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="./bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
 
     <!--<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
@@ -20,7 +21,7 @@
     <script type="text/javascript" src="./js/pselect.js"></script>
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">-->
-    <!--<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--<link rel="stylesheet" href="./bootstrapvalidator/dist/css/bootstrapValidator.min.css"/>-->
     <!--<script type="text/javascript" src="https://cdnjs.com/libraries/1000hz-bootstrap-validator"></script>-->
  </head>
@@ -34,21 +35,38 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><span>Brand</span></a>
+          <a href="#" class="navbar-left"><img class="img-rounded" src="./img/cloud-server1.png" height="50"></a>
+          <a class="navbar-brand" href="#"><span style="margin-left:7px">Cloud-Server</span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active">
-              <a href="#">Home</a>
+              <a href="#">Inicio</a>
             </li>
             <li>
-              <a href="#">Contacts</a>
+              <a href="#">Contactos</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="section">
+
+    <div class="bg"></div>
+    <div class="jumbotron">
+      <h1>Server Hosting</h1>
+      <p class="lead">Tu almacenamiento en la nube</p>
+    </div>
+
+    <!--<div class="section">
+      <div class="container">
+        <div class="row">-->
+
+
+        <!--</div>
+      </div>
+    </div>
+
+    <!--<div class="section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -56,9 +74,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <div class="section">
-      <div class="container" id="principal">
+      <div class="container">
         <div class="row">
 
           <!-- Formulario -->
@@ -75,62 +93,62 @@
 			    <div class="form-group">
 			      <label class="control-label col-sm-2" for="apellidos">Apellidos:</label>
 			      <div class="col-sm-10">
-			        <input type="text" class="form-control" id="apellidos" placeholder="Introduce tus apellidos">
+			        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos">
 			      </div>
 			    </div>
 
 			    <div class="form-group">
-			      <label class="control-label col-sm-2" for="NIF">NIF:</label>
+			      <label class="control-label col-sm-2" for="NIF">NIF/NIE:</label>
 			      <div class="col-sm-10">
-			        <input type="text" class="form-control" id="NIF" placeholder="Introduce tu NIF">
+			        <input type="text" class="form-control" id="NIF" name="NIF" placeholder="Introduce tu NIF ó NIE">
 			      </div>
 			    </div>
 
 			    <div class="form-group">
 			      <label class="control-label col-sm-2" for="tlf">Teléfono:</label>
 			      <div class="col-sm-10">
-			        <input type="text" class="form-control" id="tlf" placeholder="Introduce tu teléfono">
+			        <input type="text" class="form-control" id="tlf" name="tlf" placeholder="Introduce tu teléfono">
 			      </div>
 			    </div>
 
 			    <div class="form-group">
 			      <label class="control-label col-sm-2" for="email">Email:</label>
 			      <div class="col-sm-10">
-			        <input type="email" class="form-control" id="email" placeholder="Introduce tu correo electrónico">
+			        <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu correo electrónico">
 			      </div>
 			    </div>
 
 			    <div class="form-group">
-			      <label class="control-label col-sm-2" for="email2">Repetir email:</label>
+			      <label class="control-label col-sm-2" for="email2" >Repetir email:</label>
 			      <div class="col-sm-10">
-			        <input type="email" class="form-control" id="email2" placeholder="Repite tu correo electrónico">
+			        <input type="email" class="form-control" id="email2" name="email2" placeholder="Repite tu correo electrónico">
 			      </div>
 			    </div>
 
 			    <div class="form-group">
-			      <label class="control-label col-sm-2" for="tlf">Dirección:</label>
+			      <label class="control-label col-sm-2" for="dir">Dirección:</label>
 			      <div class="col-sm-10">
-			        <input type="text" class="form-control" id="tlf" placeholder="Introduce tu dirección">
+			        <input type="text" class="form-control" id="dir" name="dir" placeholder="Introduce tu dirección">
 			      </div>
 			    </div>
 
 			    <div class="form-group">
 			      <label class="control-label col-sm-2" for="prov">Provincia:</label>
 			      <div class="col-sm-10">
-			        <select class="form-control ps-prov" id="prov"></select>
+			        <select class="form-control ps-prov" id="prov" name="prov"></select>
 			      </div>
 			    </div>
 
 			    <div class="form-group">
 			      <label class="control-label col-sm-2" for="munic">Municipio:</label>
 			      <div class="col-sm-10">
-			        <select class="form-control ps-mun" id="munic"></select>
+			        <select class="form-control ps-mun" id="munic" name="munic"></select>
 			      </div>
 			    </div>
 
 			    <div class="form-group">
 			      <div class="col-sm-offset-2 col-sm-10">
-			        <button type="submit" class="btn btn-default">Enviar</button>
+			        <button type="submit" class="btn btn-primary">Enviar</button>
 			      </div>
 			    </div>
 			  </form>
@@ -198,11 +216,32 @@
         </div>
       </div>
     </div>
+
+
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+      <li class="breadcrumb-item"><a href="#">Servicios</a></li>
+      <li class="breadcrumb-item active">Hosting</li>
+    </ol>
+
+    <!-- Footer -->
     <footer class="section section-primary">
       <div class="container">
         <div class="row">
+          <div class="row">
+              <div class="col-md-4 col-md-offset-8">
+                  <form action="" class="search-form">
+                      <div class="form-group has-feedback">
+                      <label for="search" class="sr-only">Search</label>
+                      <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    </div>
+                  </form>
+              </div>
+          </div>
           <div class="col-sm-6">
-            <h1>Footer header</h1>
+            <h1>Síguenos:</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
               <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
               <br>Ut enim ad minim veniam, quis nostrud</p>
@@ -233,6 +272,18 @@
       </div>
     </footer>
     <script>
+
+    // Parallax
+
+    var jumboHeight = $('.jumbotron').outerHeight();
+    function parallax(){
+        var scrolled = $(window).scrollTop();
+        $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+    }
+
+    $(window).scroll(function(e){
+        parallax();
+    });
 
     // JQuery
 		$(document).ready(function(){
@@ -265,105 +316,84 @@
                         validators: {
                             notEmpty: {
                                 message: 'Se necesita el nombre, este campo no puede estar vacío.'
-                            /*},
-                            stringLength: {
-                                min: 6,
-                                max: 30,
-                                message: 'The username must be more than 6 and less than 30 characters long'
+                            }
+                        }
+                    },
+                    apellidos: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Se necesitan los apellidos, este campo no puede estar vacío.'
+                            }
+                        }
+                    },
+                    NIF: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Introduce NIF ó NIE por favor, es un campo requerido.'
                             },
                             regexp: {
-                                regexp: /^[a-zA-Z0-9_\.]+$/,
-                                message: 'The username can only consist of alphabetical, number, dot and underscore'
-                                */
+                                regexp: /^(([X-Zx-z]{1})([-]?)(\d{7})([-]?)([A-Za-z]{1}))$|^((\d{8})([-]?)([A-Za-z]{1}))$/,
+                                message: 'NIF/NIE con formato incorrecto.'
                             }
                         }
                     },
-                    country: {
+                    tlf: {
                         validators: {
                             notEmpty: {
-                                message: 'The country is required and can\'t be empty'
-                            }
-                        }
-                    },
-                    acceptTerms: {
-                        validators: {
-                            notEmpty: {
-                                message: 'You have to accept the terms and policies'
+                                message: 'Se necesita el teléfono, este campo no puede estar vacío.'
+                            },
+                            regexp: {
+                                regexp: /^(0034|\+34)?-? ?([1-9]\d\d)-? ?(\d\d)-? ?(\d)-? ?(\d)-? ?(\d\d)$/,// Solo numeros españoles.
+                                message: 'Teléfono con formato incorrecto.'
                             }
                         }
                     },
                     email: {
                         validators: {
                             notEmpty: {
-                                message: 'The email address is required and can\'t be empty'
+                                message: 'Se necesita el email, este campo no puede estar vacío.'
                             },
                             emailAddress: {
-                                message: 'The input is not a valid email address'
-                            }
-                        }
-                    },
-                    website: {
-                        validators: {
-                            uri: {
-                                message: 'The input is not a valid URL'
-                            }
-                        }
-                    },
-                    phoneNumber: {
-                        validators: {
-                            digits: {
-                                message: 'The value can contain only digits'
-                            }
-                        }
-                    },
-                    color: {
-                        validators: {
-                            hexColor: {
-                                message: 'The input is not a valid hex color'
-                            }
-                        }
-                    },
-                    zipCode: {
-                        validators: {
-                            zipCode: {
-                                country: 'US',
-                                message: 'The input is not a valid US zip code'
-                            }
-                        }
-                    },
-                    password: {
-                        validators: {
-                            notEmpty: {
-                                message: 'The password is required and can\'t be empty'
+                                message: 'El formato de correo electronico no es válido.'
                             },
                             identical: {
-                                field: 'confirmPassword',
-                                message: 'The password and its confirm are not the same'
+                                field: 'email2',
+                                message: 'Los campos de correo electrónico deben coincidir.'
                             }
                         }
                     },
-                    confirmPassword: {
+                    email2: {
                         validators: {
                             notEmpty: {
-                                message: 'The confirm password is required and can\'t be empty'
+                                message: 'Se necesita el email, este campo no puede estar vacío.'
+                            },
+                            emailAddress: {
+                                message: 'El formato de correo electronico no es válido.'
                             },
                             identical: {
-                                field: 'password',
-                                message: 'The password and its confirm are not the same'
+                                field: 'email',
+                                message: 'Los campos de correo electrónico deben coincidir.'
                             }
                         }
                     },
-                    ages: {
+                    dir: {
                         validators: {
-                            lessThan: {
-                                value: 100,
-                                inclusive: true,
-                                message: 'The ages has to be less than 100'
-                            },
-                            greaterThan: {
-                                value: 10,
-                                inclusive: false,
-                                message: 'The ages has to be greater than or equals to 10'
+                            notEmpty: {
+                                message: 'Se necesita la dirección, este campo no puede estar vacío.'
+                            }
+                        }
+                    },
+                    prov: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Se debe elegir una provincia.'
+                            }
+                        }
+                    },
+                    munic: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Se debe elegir un municipio.'
                             }
                         }
                     }
