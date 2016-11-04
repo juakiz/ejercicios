@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Las etiquetas meta deben ir al principio del head, empezando por las tres anteriores. El resto de etiquetas irán después del meta -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- icono de la web -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>eHosting :: Servicios profesionales</title>
+
+     <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Estilos personalizados para esta plantilla -->
+    <link href="css/carousel.css" rel="stylesheet">
+     <!-- Estilos personalizados eHosting.css -->
+    <link href="css/eHosting.css" rel="stylesheet">
+    <!-- Javascript bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Javascript para selects encadenados -->
+    <script src="js/provincias.js"></script>
+  </head>
+
+<!-- NAVBAR
+Barra de menú superior
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container ">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">eHosting</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#about">Sobre nosotros</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servicios <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Desarrollo web</a></li>
+                    <li><a href="#">Dominios</a></li>
+                    <li><a href="#">Hosting</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Otros servicios</li>
+                    <li><a href="#">Atención personalizada</a></li>
+                    <li><a href="#">Servicios en la nube</a></li>
+                  </ul>
+                </li>
+                <li><a href="#contact">Contacto</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Desarrollo web</h1>
+              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Servicios en la nube</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Atención personalizada</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <div class="row">
+        <div class="col-lg-*">
+            <ul class="breadcrumb breads" id="migas1">
+              <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </div>
+      </div>
+	  
+	  <div id="barraBuscar" class="row">
+        <div class="col-md-12">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control" placeholder="Buscar" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+	  
+	<div class="row">
+	<hr>
+	</div>
+	
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4" id="col1">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
+          <h2>Gratis</h2>
+            <p>1GB Disco / 8GB Transf. mensual
+                      <br>2 Bases de datos
+                      <br>20 Cuentas de correo.</p>
+                    <font size="5">Sin coste mensual</font>
+          <p><a class="btn btn-default" href="#" role="button">Más información &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" id="col2">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
+          <h2>Profesional</h2>
+         <p>Disco / Transf. mensual Ilimitados
+                      <br>4 Bases de datos
+                      <br>Correos ilimitado</p>
+                    <font size="5">10€/Mensual</font>
+          <p><a class="btn btn-default" href="#" role="button">Más información &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4" id="col3">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
+          <h2>Premium+</h2>
+           <p>Disco / Transf. mensual Ilimitados
+                      <br>Bases de datos / Correos ilimitado
+                      <br>Incluye dominio</p>
+                    <font size="5">25€/Mensual</font>
+          <p><a class="btn btn-default" href="#" role="button">Más información &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      
+
+
+    <!-- FORMULARIO -->
+
+    <div class="hidden col-lg-8 formLabel" id="form1">
+      <form id="register-form" class="form-horizontal form-group" action="CifpDAO.php" method="post" role="form">
+		<div class="row has-success has-feedback">
+			<label class="col-lg-12 spacesForm">Nombre *</label>
+			<div class="col-lg-4">
+				<input type="text" id="nombre" placeholder="Introduzca su nombre" name="nombre2" aria-describedby="Success2Status" class="form-control" maxlength="50" autofocus>          
+				<span class="glyphicon glyphicon-user form-control-feedback" aria-hidden="true"></span>
+				<span id="Success2Status" class="sr-only">(Correcto)</span>
+			</div>
+ 	    
+			<label class="col-lg-12 spacesForm">Apellidos *</label>
+			<div class="col-lg-8">
+				<input type="text" id="apellidos" placeholder="Introduzca sus apellidos"  name="apellidos2" class="form-control" maxlength="100">
+			</div>
+        
+			<label class="col-lg-12 spacesForm">NIF *</label>
+			<div class="col-lg-4">
+			 <input type="text" id="nif" name="nif2" placeholder="Identificación" class="form-control" maxlength="9">
+			</div>
+			<label class="col-lg-8 hidden alert alert-danger" id="nifError">Nif incorrecto.</label>
+    
+			<label class="spacesForm hidden-xs hidden-sm col-lg-12">Fecha de nacimiento</label>
+			<div class="col-lg-4">
+			  <input type="date" id="fechanac" name="fechanac2" class="form-control hidden-xs hidden-sm">
+			</div>
+			
+			<label class="spacesForm col-lg-12">Correo electrónico *</label>
+			<div class="col-lg-6">
+			<input type="email" id="correo1" name="correo12"  placeholder="Correo electrónico" class="form-control" maxlength="100" aria-describedby="Warning2Status">
+			<span class="glyphicon glyphicon-envelope form-control-feedback" aria-hidden="true"></span>
+			<span id="Warning2Status" class="sr-only">(warning)</span>
+			</div>
+			<div class="col-lg-6"></div>
+			
+			<label class="spacesForm col-lg-12 hidden-xs hidden-sm">Repita su correo electrónico *</label>
+			<div class="col-lg-6">
+			<input type="email" class="form-control hidden-xs hidden-sm" placeholder="repetir correo" id="correo2" maxlength="100" aria-describedby="Warning2Status">
+			<span class="glyphicon glyphicon-envelope form-control-feedback" aria-hidden="true"></span>
+			<span id="Warning2Status" class="sr-only">(warning)</span>
+			</div>
+			<div id="emailError"class="col-lg-6 hidden alert alert-danger">
+			<label>El correo electrónico no coincide.</label>
+			</div>
+
+			<label class="spacesForm col-lg-12 hidden-xs hidden-sm">Direccion</label>
+			<div class="col-lg-12">
+			<input type="text" id="direccion" placeholder="Dirección completa" name="direccion2" class="form-control hidden-xs hidden-sm" maxlength="100">
+			</div>
+
+			<label class="spacesForm col-lg-12 hidden-xs hidden-sm">Provincia</label>
+			<div class="col-lg-6">
+			<select class="col-lg-6 form-control hidden-xs hidden-sm" id="provinciaId">
+			</select></div>
+			<div class="col-lg-6"></div>
+
+			<label class="spacesForm col-lg-12 hidden-xs hidden-sm">Municipio</label>
+			<div class="col-lg-6">
+			<select class="form-control hidden-xs hidden-sm" id="municipioId"></select>
+			</div>
+			<div class="col-lg-6"><p>&nbsp;</p></div>
+			
+			
+			<label class="col-lg-12"></label>
+			<div class="col-lg-4 ">
+			<input type="submit" id="btn1" class="spacesForm form-control form-control-btn btn btn-success" disabled="true"></button>
+			</div>
+			<div class="col-lg-8"></div>
+
+		</div>
+        
+      </form>
+	  </div>
+    </div><!-- /.row -->
+
+      <!-- BLOQUE INFERIOR -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Desarrollo web.<span class="text-muted"> Multidispositivo.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Prueba nuestros servicios en la <span class="text-muted">nube.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading"><span class="text-muted">Atención </span> personalizada</h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Ir a inicio</a></p>
+        <p>&copy; 2016 CIFP eHosting, Inc. &middot; <a href="#">Protección de datos</a> &middot; <a href="#">Información legal</a></p>
+      </footer>
+
+       <div class="col-sm-6">
+            <p class="text-info text-right">
+              <br>
+              <br>
+            </p>
+            <div class="row">
+              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+          </div>
+
+    </div><!-- /.container -->
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-2.2.0.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+
+<script>
+      
+      $(document).ready(function(){
+          $("#col1").click(function(){
+            $("#col2, #col3").hide();
+            $("#form1").fadeIn(600);
+            $("#form1").removeClass("hidden");
+			
+            updateBreadscrum(1);
+          });
+          $("#col2").click(function(){
+              $("#col1, #col3").hide();
+              $("#form1").fadeIn(600);
+              $("#form1").removeClass("hidden");
+              updateBreadscrum(2);
+          });
+          $("#col3").click(function(){
+              $("#col1, #col2").hide();
+              $("#form1").fadeIn(600);
+              $("#form1").removeClass("hidden");
+              updateBreadscrum(3);
+          });
+           $("#nombre, #apellidos, #nif").focusout(function(){
+              enable_disable_btn();
+          });
+          $("#nif").focusout(function(){
+            validarNIF();
+          });
+          $("#correo2").focusout(function(){
+            validarCorreo();
+          });
+         
+
+      });
+
+       function updateBreadscrum(Tipo){
+        
+        var ul = document.getElementById("migas1");
+        var li = document.createElement("li");
+
+        var text = "";
+        switch(Tipo){
+          case 1:
+            text = "Gratis";
+            break;
+          case 2:
+            text = "Profesional";
+            break;
+          case 3:
+            text = "Premium +";
+            break;
+        }
+        li.appendChild(document.createTextNode(text));
+        ul.appendChild(li);
+		 $("#barraBuscar").addClass("hidden");
+       }   
+
+       function validarCorreo(){
+
+            var correo1 = document.getElementById("correo1").value;
+            var correo2 = document.getElementById("correo2").value;
+            var error = document.getElementById("emailError");
+
+
+            if(correo1 != correo2){
+              error.classList.remove("hidden");
+              document.getElementById("btn1").disabled = true;
+            }else{
+              error.classList.add("hidden");
+              document.getElementById("btn1").disabled = false;
+            }
+            
+        }
+
+        function enable_disable_btn(){
+
+            var nombre = document.getElementById("nombre").value;
+            var apellidos = document.getElementById("apellidos").value;
+            var nif = document.getElementById("nif").value;
+
+            if(nombre.length  >0 && apellidos.length > 0 && nif.length > 0){
+              document.getElementById("btn1").disabled = false;
+            }else{
+              document.getElementById("btn1").disabled = true;
+            }
+        }
+
+        function validarNIF(){
+          var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B','N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+          var nif = document.getElementById("nif").value;
+          var error = document.getElementById("nifError");
+      
+          if(nif.length == 9){
+            var numero = nif.substring(0, 8);
+            var letra = nif.substring(8).toUpperCase();
+            var letraCalculada = letras[numero % 23];
+            if(letraCalculada != letra){
+              error.classList.remove("hidden");
+            }
+            else{
+              error.classList.add("hidden");
+            } 
+          }
+          else{
+            error.classList.remove("hidden");
+          }
+        }
+    </script>
+
+
+  </body>
+</html>

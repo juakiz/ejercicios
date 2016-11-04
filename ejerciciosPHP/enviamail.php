@@ -84,29 +84,29 @@
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">  
 <table border="0">
   <tr>
-  <td>Asunto:</td>		<td> <input type="text" name="asunto" placeholder="Resumen..."> * <?php imprimeError($errorAsunto); ?></td>
+      <td>Asunto:</td>		<td> <input type="text" name="asunto" placeholder="Resumen..."> * <?php imprimeError($errorAsunto); ?></td>
   </tr>
   <tr>
-  <td>Urgente:</td>		<td> <input type="checkbox" name="urgente"></td>
+      <td>Urgente:</td>		<td> <input type="checkbox" name="urgente"></td>
   </tr>
   <tr>
-  <td>Tipo:</td>		<td>
+      <td>Tipo:</td>		<td>
 						<input type="radio" name="tipo" value="Hardware" checked>Hardware<br>
 						<input type="radio" name="tipo" value="Redes">Redes<br>
 						<input type="radio" name="tipo" value="Software">Software<br>
 						</td>
   </tr>
   <tr>
-  <td>Fecha:</td>					<td> <input type="date" name="fecha"> * <?php imprimeError($errorFecha); ?></td>
+      <td>Fecha:</td>					<td> <input type="date" name="fecha"> * <?php imprimeError($errorFecha); ?></td>
   </tr>
   <tr>
-  <td>Identificador:</td>			<td> <input type="number" name="identificador" placeholder="1"> * <?php imprimeError($errorIdentificador); ?></td>
+      <td>Identificador:</td>			<td> <input type="number" name="identificador" placeholder="1"> * <?php imprimeError($errorIdentificador); ?></td>
   </tr>
   <tr>
-  <td>E-mail de contacto:</td>		<td> <input type="email" name="email" placeholder="usuario@mail.com"> * <?php imprimeError($errorEmail); ?></td>
+      <td>E-mail de contacto:</td>		<td> <input type="email" name="email" placeholder="usuario@mail.com"> * <?php imprimeError($errorEmail); ?></td>
   </tr>
   <tr>
-  <td>Descripción:</td>				<td> <textarea rows="10" cols="21" name="descripcion" placeholder="Por favor, detalle su incidencia..."></textarea> * <?php imprimeError($errorDescripcion); ?></td>
+      <td>Descripción:</td>				<td> <textarea rows="10" cols="21" name="descripcion" placeholder="Por favor, detalle su incidencia..."></textarea> * <?php imprimeError($errorDescripcion); ?></td>
   </tr>
   <tr>
 			<td colspan="2"> <input type="submit" name="submit" value="ENVIAR"> </td>
