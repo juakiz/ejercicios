@@ -192,7 +192,7 @@
                 </ul>
               </div>
               <div class="circle">
-                <p class="text-center">50€</p>
+                <p class="text-center">10€</p>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@
                 </ul>
               </div>
               <div class="circle">
-                <p class="text-center">75€</p>
+                <p class="text-center">25€</p>
               </div>
             </div>
           </div>
@@ -309,6 +309,9 @@
 
         // Plugin de validacion
         $(document).ready(function() {
+
+            
+
             $('#defaultForm').bootstrapValidator({
                 message: 'Valor inválido',
                 feedbackIcons: {
@@ -361,11 +364,11 @@
                             },
                             emailAddress: {
                                 message: 'El formato de correo electronico no es válido.'
-                            },
+                            }/*,
                             identical: {
                                 field: 'email2',
                                 message: 'Los campos de correo electrónico deben coincidir.'
-                            }
+                            }*/
                         }
                     },
                     email2: {
@@ -406,6 +409,8 @@
                 }
             });
         });
+
+
 
 	    // Ajax
 	    /*var $select = $('#prov');
