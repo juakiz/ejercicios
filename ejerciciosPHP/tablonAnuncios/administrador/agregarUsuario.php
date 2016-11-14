@@ -10,7 +10,9 @@
   </head>
 <body bgcolor=#00BBAA>
 
-  <a href="./agregarNoticia.php">Agregar noticia<a>
+  <button><a href="./index.php" style="text-decoration:none;">LOG OUT</a></button>
+
+  <br><br><button><a href="./agregarNoticia.php" style="text-decoration:none;">Agregar noticia</a></button>
 
 <?php
 

@@ -35,12 +35,11 @@
 
  <Noticia>
    <X>400px</X>
-   <Y>1px</Y>
+   <Y>10px</Y>
    <Ancho>100px</Ancho>
    <Alto>100px</Alto>
    <ColorTexto></ColorTexto>
    <TamanoTexto>25px</TamanoTexto>
    <Texto>hola</Texto>
  </Noticia>
-
 </Noticias>

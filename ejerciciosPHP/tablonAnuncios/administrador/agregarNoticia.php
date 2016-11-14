@@ -10,7 +10,10 @@
   </head>
 <body bgcolor=#00BBAA>
 
-<a href="./agregarUsuario.php">Agregar usuario<a>
+  <button><a href="./index.php" style="text-decoration:none;">LOG OUT</a></button>
+
+  <br><br>
+  <button><a href="./agregarUsuario.php" style="text-decoration:none;">Agregar usuario</a></button>
 
 <?php
 
@@ -43,7 +46,7 @@
           $errorX = "El campo no puede estar vacio";
           $sinErrores = false;
         } else if (!ctype_digit($_POST['X'])){
-          $errorX .= " El valor tiene que ser numerico";
+          $errorX .= " El valor tiene que ser numerico y positivo.";
           $sinErrores = false;
         } else {
           $X = procesarValor($_POST['X']);
@@ -54,7 +57,7 @@
           $errorY = "El campo no puede estar vacio";
           $sinErrores = false;
         } else if (!ctype_digit($_POST['Y'])){
-          $errorY .= " El valor tiene que ser numerico";
+          $errorY .= " El valor tiene que ser numerico y positivo.";
           $sinErrores = false;
         } else {
           $Y = procesarValor($_POST['Y']);
@@ -64,7 +67,7 @@
           $errorAncho = "El campo no puede estar vacio";
           $sinErrores = false;
         } else if (!ctype_digit($_POST['ancho'])){
-          $errorAncho .= " El valor tiene que ser numerico";
+          $errorAncho .= " El valor tiene que ser numerico y positivo.";
           $sinErrores = false;
         } else {
           $ancho = procesarValor($_POST['ancho']);
@@ -74,7 +77,7 @@
           $errorAlto = "El campo no puede estar vacio";
           $sinErrores = false;
         } else if (!ctype_digit($_POST['alto'])){
-          $errorAlto .= " El valor tiene que ser numerico";
+          $errorAlto .= " El valor tiene que ser numerico y positivo.";
           $sinErrores = false;
         } else {
           $alto = procesarValor($_POST['alto']);
@@ -91,7 +94,7 @@
           $errorTamano = "El campo no puede estar vacio";
           $sinErrores = false;
         } else if (!ctype_digit($_POST['tamano'])){
-          $errorTamano .= " El valor tiene que ser numerico";
+          $errorTamano .= " El valor tiene que ser numerico y positivo.";
           $sinErrores = false;
         } else {
           $tamano = procesarValor($_POST['tamano']);
@@ -125,7 +128,7 @@
         <td>Alto:</td>	<td> <input type="text" name="alto"> * <?php imprimeError($errorAlto); ?></td>
     </tr>
     <tr>
-        <td>Color Texto:</td>	<td> <input type="color" name="color"> * <?php imprimeError($errorColor); ?></td>
+        <td>Color Texto:</td>	<td> <input type="color" name="color"></td>
     </tr>
     <tr>
         <td>Tamano Texto:</td>	<td> <input type="text" name="tamano"> * <?php imprimeError($errorTamano); ?></td>
@@ -163,7 +166,7 @@ if($sinErrores){
       fclose($noticias);
   }
 } else {
-  echo "Algo ha fallado...";
+  imprimeError("Algo ha fallado, no se ha insertado la noticia...");
 }
 ?>
 
