@@ -1,41 +1,27 @@
 <?php
 session_name('sesion_array'); // Nombre de la sesión a crear/continuar.Mismo nombre que la cookie a crear
 session_start(); // Crea la sesión con el nombre especificado o se continua si ya existe la sesión
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
 
-	if(!empty($_POST['nombre']))
-		$nombre = $_SESSION['nombre'] = $_POST['nombre'];
+	if(!empty($_SESSION['nombre']))
+		$nombre = $_SESSION['nombre'];
+	else
+		header("Location: sesionarray.php");
 
-	if(!empty($_POST['color'])){
-		$color = $_POST['color'];
-		if ($color == "rojo")
-			$color = "#FF0000";
-		if ($color == "verde")
-			$color = "#00FF00";
-		if ($color == "azul")
-			$color = "#0044FF";
-	}
+	if(!empty($_SESSION['color']))
+		$color = $_SESSION['color'];
+	else
+		header("Location: sesionarray.php");
 
-	if(!empty($_POST['lenguaje']))
-		$lenguaje = $_SESSION['lenguaje'] = $_POST['lenguaje'];
+	if(!empty($_SESSION['lenguaje']))
+		$lenguaje = $_SESSION['lenguaje'];
+	else
+		header("Location: sesionarray.php");
 
-}
-/*
-if (!isset($_SESSION['contador'])) { // No existe la variable->primera vez que se visita->contador a 1
-$contador = 1;
-$mensaje = "Es la primera vez que me visitas en esta sesión.";
-} else { // Ya existe la variable-> ya ha visitado-> incrementar contador
-$contador = $_SESSION['contador']; // Lee el valor de la variable de sesión
-$contador++;
-$mensaje = "Me has visitado en esta sesión con este navegador ".$contador." veces.";
-}
-$_SESSION['contador'] = $contador; // Asigna un valor a la variable de sesión
-*/
 ?>
 <!DOCTYPE html>
-<html> 
-<head> 
-	<title>Sesion array</title> 
+<html>
+<head>
+	<title>Sesion array</title>
 </head> 
 <body bgcolor=" <?php echo $color;?> "> 
 

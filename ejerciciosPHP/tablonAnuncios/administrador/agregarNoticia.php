@@ -148,8 +148,8 @@ if($sinErrores){
 
       $noticias = fopen("./../Noticias.xml", "r+");
 
-      $addUser = "string_for_new_user\n?>";
-      fseek($noticias, -12, SEEK_END);
+
+      fseek($noticias, -13, SEEK_END);
 
       fputs($noticias, "".PHP_EOL);
       fputs($noticias, " <Noticia>".PHP_EOL);

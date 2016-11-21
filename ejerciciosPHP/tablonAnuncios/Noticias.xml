@@ -42,4 +42,25 @@
    <TamanoTexto>25px</TamanoTexto>
    <Texto>hola</Texto>
  </Noticia>
+
+ <Noticia>
+   <X>50px</X>
+   <Y>50px</Y>
+   <Ancho>50px</Ancho>
+   <Alto>50px</Alto>
+   <ColorTexto>#000000</ColorTexto>
+   <TamanoTexto>20px</TamanoTexto>
+   <Texto>sdfagag aga</Texto>
+ </Noticia>
+ 
+
+ <Noticia>
+   <X>90px</X>
+   <Y>90px</Y>
+   <Ancho>90px</Ancho>
+   <Alto>90px</Alto>
+   <ColorTexto>#000000</ColorTexto>
+   <TamanoTexto>20px</TamanoTexto>
+   <Texto>gsh lgskj gs</Texto>
+ </Noticia>
 </Noticias>
