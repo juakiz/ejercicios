@@ -9,7 +9,7 @@
 			$errorValidacion .= "Debe especificar un fichero a subir.";
 		} else {
 			$tamaño = $_FILES['fichero']['size'];
-			if ($tamaño > 10000000 || $tamaño == 0) {  // tamaño máximo 10 MB = 10000000 B
+			if ($tamaño > 10000000 || $tamaño == 0) {  // tamaño máximo 32 KB
 				$validacionOK = false;
 				$errorValidacion .= "El tamaño ".$tamaño." excede el límite de 10 MB permitido.";
 			}
@@ -62,25 +62,15 @@
 
 <!-- FICHERO SUBIDO CON EL FORMULARIO -->
 	<?php
-	   if ($_SERVER["REQUEST_METHOD"] == "POST" && $validacionOK == true) {
-			// Copia el archivo a la carpeta de destino y borra el archivo temporal
-			$directorio = $_POST['directorio'];
-			$rutaDef = "./" . $directorio . "/";
-			$nombreTmp = $_FILES['fichero']['tmp_name'];
-			$nombreDef = $rutaDef . $_FILES['fichero']['name'];
-			$resultado = copy($nombreTmp,$nombreDef);
-			if ($resultado == 0) {
-				unlink($nombreTmp);
-			}
-
-			echo "<h4> Fichero subido correctamente. </h4>";
-			echo "<p>Contenido del directorio de destino: ".$rutaDef."</p>";
-			$listadoFicheros = scandir($rutaDef);
-			for ($i = 2; $i < count($listadoFicheros); $i++) {
-				$nombreFichero = $listadoFicheros[$i];
-				echo "&nbsp;&nbsp;&nbsp;&nbsp;" . $nombreFichero . "<br>";
-			}
-		}
+	// Copia el archivo a la carpeta de destino y borra el archivo temporal
+	$rutaDef = "C:/xampp/htdocs/upload/";
+	if (!is_dir($rutaDef)) // Crea el directorio de destino si no existe
+	mkdir($rutaDef);
+	$nombreTmp = $_FILES[$archivo]['tmp_name'];
+	$nombreDef = $rutaDef . $_FILES[$archivo]['name'];
+	$resultado = copy($nombreTmp,$nombreDef);
+	if ($resultado == 0)
+	unlink($nombreTmp); // Borra el archivo temporal
 	?>
 </body>
 </html>

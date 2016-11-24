@@ -1,0 +1,7 @@
+Hola,
+soy un simple archivo de
+texto. He sido creado como
+ejemplo para probar el programa
+que hay que crear en el examen de PHP.
+Tras ejecutar el programa, todo el texto que
+tengo quedara centrado como si fuera un poema.

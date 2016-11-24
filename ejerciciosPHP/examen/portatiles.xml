@@ -1,0 +1,44 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE Portatiles [
+	<!ELEMENT Portatiles (Portatil*)>
+	<!ELEMENT Portatil (Marca, Procesador, RAM, Disco, Precio)>
+	<!ELEMENT Marca (#PCDATA)>
+	<!ELEMENT Procesador (#PCDATA)>
+	<!ELEMENT RAM (#PCDATA)>
+	<!ELEMENT Disco (#PCDATA)>
+	<!ELEMENT Precio (#PCDATA)>
+]>
+
+<Portatiles>
+	<Portatil>
+		<Marca>ASUS</Marca>
+		<Procesador>Intel i5</Procesador>
+		<RAM>16GB</RAM>
+		<Disco>1TB</Disco>
+		<Precio>550€</Precio>
+	</Portatil>
+
+	<Portatil>
+		<Marca>HP</Marca>
+		<Procesador>AMD A8</Procesador>
+		<RAM>8GB</RAM>
+		<Disco>1TB</Disco>
+		<Precio>500€</Precio>
+	</Portatil>
+	
+	<Portatil>
+		<Marca>ASUS</Marca>
+		<Procesador>AMD E1</Procesador>
+		<RAM>12GB</RAM>
+		<Disco>500GB</Disco>
+		<Precio>450€</Precio>
+	</Portatil>	
+	
+	<Portatil>
+		<Marca>LG</Marca>
+		<Procesador>Intel i7</Procesador>
+		<RAM>16GB</RAM>
+		<Disco>1TB</Disco>
+		<Precio>700€</Precio>
+	</Portatil>	
+</Portatiles>
