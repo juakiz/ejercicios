@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<!DOCTYPE Libreria [
+	<!ELEMENT Libreria (Libro*)>
+	<!ELEMENT Libro (Titulo, Autor, Precio, Novedad)>
+	<!ELEMENT Titulo (#PCDATA)>
+	<!ELEMENT Autor (#PCDATA)>
+	<!ELEMENT Precio (#PCDATA)>
+	<!ELEMENT Novedad (#PCDATA)>
+]>
+
+<Libreria>
+	<Libro>
+		<Titulo>Titulo 1</Titulo>
+		<Autor>Autor 1</Autor>
+		<Precio>10</Precio>
+		<Novedad>Si</Novedad>
+	</Libro>
+	<Libro>
+		<Titulo>Titulo 2</Titulo>
+		<Autor>Autor 1</Autor>
+		<Precio>12</Precio>
+		<Novedad>No</Novedad>
+	</Libro>
+	<Libro>
+		<Titulo>Titulo 3</Titulo>
+		<Autor>Autor 3</Autor>
+		<Precio>15</Precio>
+		<Novedad>No</Novedad>
+	</Libro>
+	<Libro>
+		<Titulo>Titulo 4</Titulo>
+		<Autor>Autor 2</Autor>
+		<Precio>16</Precio>
+		<Novedad>Si</Novedad>
+	</Libro>
+	<Libro>
+		<Titulo>Titulo 5</Titulo>
+		<Autor>Autor 1</Autor>
+		<Precio>20</Precio>
+		<Novedad>No</Novedad>
+	</Libro>
+	<Libro>
+		<Titulo>Titulo 6</Titulo>
+		<Autor>Autor 3</Autor>
+		<Precio>18</Precio>
+		<Novedad>Si</Novedad>
+	</Libro>
+</Libreria>
