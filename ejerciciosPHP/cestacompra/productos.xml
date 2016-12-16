@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE Productos [
+<!ELEMENT Productos (Producto*)>
+<!ELEMENT Producto (Nombre, Imagen, Precio)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Imagen (#PCDATA)>
+<!ELEMENT Precio (#PCDATA)>
+]>
+<Productos>
+<Producto>
+<Nombre>Tablet Samsung View</Nombre>
+<Imagen>http://www.samsung.com/global/galaxy/galaxyview/
+images/galaxy-view_gallery_front_black_s3.png</Imagen>
+<Precio>640</Precio>
+</Producto>
+<Producto>
+<Nombre>Móvil iPhone7</Nombre>
+<Imagen>https://www.vodafone.es/img/dynamique/LARGE/a
+89e671b092c47c8b4c046bbcf74f1bd_275x385_4G_1.png</Imagen>
+<Precio>750</Precio>
+</Producto>
+<Producto>
+<Nombre>Portátil HP Pavilion</Nombre>
+<Imagen>http://d243u7pon29hni.cloudfront.net/images/p
+roducts/Portatil_HP_Pavilion_15-P139NS_1Tb_ad_l.png</Imagen>
+<Precio>550</Precio>
+</Producto>
+</Productos>

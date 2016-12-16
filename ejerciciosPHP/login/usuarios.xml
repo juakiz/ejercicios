@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE Usuarios [
+<!ELEMENT Usuarios (Usuario*)>
+<!ELEMENT Usuario (Nombre, Clave)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Clave (#PCDATA)>
+]>
+<Usuarios>
+	<Usuario>
+		<Nombre>usuario</Nombre>
+		<Clave>usuario</Clave>
+	</Usuario>
+	<Usuario>
+		<Nombre>test</Nombre>
+		<Clave>test</Clave>
+	</Usuario>
+	<Usuario>
+		<Nombre>manolo</Nombre>
+		<Clave>manolo</Clave>
+	</Usuario>
+</Usuarios>

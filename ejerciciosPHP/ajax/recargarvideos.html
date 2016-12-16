@@ -1,0 +1,28 @@
+<html> <head> <title>Recarga de v&iacute;deos independientes con AJAX</title>
+<script language="JavaScript" type="text/javascript">
+function recargar (id, tiempo) {
+	var nuevoscript = document.createElement("script");
+	nuevoscript.src = 'recargarVideos.php?id=' + id + '&tiempo=' + tiempo;
+	nuevoscript.setAttribute('language', 'javascript');
+	nuevoscript.setAttribute('type', 'text/javascript');
+	document.body.appendChild(nuevoscript);
+}
+</script>
+</head>
+<body bgcolor="#AAAAFF">
+	<h3>Recarga de v&iacute;deos independientes con AJAX</h3> <br>
+	<div id="video1">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/5l5Xn_LOEY4?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<br> <input type="number" id="tiempoVideo1" min="0">
+	<input type="submit" onClick="recargar('video1',document.getElementById('tiempoVideo1').value);"
+	value="ACTUALIZAR">
+	<br> <br> <hr> <br>
+	<div id="video2">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/voywIbE8P7M?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<br> <input type="number" id="tiempoVideo2" min="0">
+	<input type="submit" onClick="recargar('video2',document.getElementById('tiempoVideo2').value);"
+	value="ACTUALIZAR">
+</body>
+</html>

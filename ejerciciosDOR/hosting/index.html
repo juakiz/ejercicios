@@ -292,7 +292,9 @@
           });
     });
 
-    // JQuery
+    // Estilos con JQuery
+
+    // Mostrar-ocultar divs
 		$(document).ready(function(){
             $("#caja1").click(function(){
                 $("#co2,#co3").toggle("slow");
@@ -307,6 +309,14 @@
                 $("#formu").toggle("slow");
             });
         });
+
+    // Hover divs
+
+    $("#caja1,#caja2,#caja3").hover(function(){
+      $(this).css("background-color", "#CCCCCC");
+    }, function(){
+      $(this).css("background-color", "#FFFFFF");
+    });
 
         // Plugin de validacion
         $(document).ready(function() {

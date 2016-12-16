@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+function lanzar (valor) {
+	if (valor.length == 0) {
+		document.getElementById("dados").innerHTML = "";
+	} else {
+		var xhr = new XMLHttpRequest();
+		// función JavaScript que se ejecutará al recibir la respuesta PHP del server:
+		xhr.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("dados").innerHTML = this.responseText;
+			}
+		};
+		xhr.open("GET", "lanzardados.php?cuantos=" + valor, true); // URL con parámetros
+		xhr.send();
+	}
+}
+</script> 
+</head>
+<body>
+	<p><b>Indique la cantidad de dados que desea lanzar:</b></p>
+	<form>
+		<input type="number" min="1" max="10" value="1" onChange="lanzar(this.value)">
+	</form>
+	<hr>
+	<div id="dados" style="font-size:120px; color:blue;"> </div>
+</body> 
+</html>
