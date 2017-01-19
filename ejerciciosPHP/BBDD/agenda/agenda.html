@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agenda de contactos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.titulo { color:#000088; font-family:verdana; font-size:18px; font-weight:bold; } 
+		.texto { color:#000055; font-family:verdana; font-size:16px; }
+		.boton { height:36px; width:110px; font-family:Arial; font-size:10px; line-height:36px; }
+		.caja { font-family:Arial; font-size:14px;	height:24px; width:200px;}
+		.error { color:red; font-family:verdana; font-size:15px; }
+		.ok { color:green; font-family:verdana; font-size:15px; }
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+	
+	<script>
+		function ajax (accion, nombre, telefono) {
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById('resultado').innerHTML = this.responseText;
+				}
+			};
+			xhr.open("POST", "agenda.php", true);
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			var parametros;
+			if (accion == "importar") 
+				parametros = "accion=" + accion + "&sobreescribir=" + nombre;
+			else
+				parametros = "accion=" + accion + "&nombre=" + nombre + "&telefono=" + telefono;
+			xhr.send(parametros);				
+		}
+		
+		function buscarContacto (nombre) {
+			ajax("buscar", nombre, "");				
+		}
+		
+		function anadirContacto (nombre, telefono) {
+			ajax("anadir", nombre, telefono);				
+		}
+		
+		function eliminarContacto (nombre) {
+			ajax("eliminar", nombre, "");				
+		}
+		
+		function actualizarContacto (nombre, telefono) {
+			ajax("actualizar", nombre, telefono);				
+		}
+		
+		function importarContactos (fichero, sobreescribir) {
+			var data = new FormData();
+			data.append('accion', 'importar');
+			data.append('fichero', fichero.files[0]);
+			data.append('sobreescribir', sobreescribir);
+
+			$.ajax({
+				url:"agenda.php",
+				type:"POST",
+				contentType:false,
+				data:data,
+				processData:false,
+				cache:true,
+				success: function(data){
+							$("#resultado").html(data);            
+						}
+				}
+			);
+		}		
+	</script>
+	
+</head>
+<body bgcolor="#11AAEE">
+	<p class="titulo">Base de Datos de Contactos:</p>
+		<table class="texto" width="520" border="0">
+			<tr>
+				<td rowspan="2" width="140">
+					<img src="imagenes/logocontacto.png" width="90" height="90">
+				</td>
+				<td>Nombre:</td>
+				<td><input type="text" name="nombre" id="nombre" size="22" maxlength="20" class="caja"></td>
+			</tr>
+			<tr>
+				<td>Teléfono:</td>
+				<td><input type="number" name="telefono" id="telefono" size="22" class="caja" max="999999999"></td>
+			</tr>
+		</table>
+		<br>
+		<table width="450" border="0">		
+			<tr>
+				<td><button type="submit" name="buscar" class="boton" value="BUSCAR" onClick="buscarContacto(document.getElementById('nombre').value);"><img align="top" src="imagenes/buscar.png" width="24" height="24">&nbsp;BUSCAR</button></td>
+				<td><button type="submit" name="anadir" class="boton" value="ANADIR" onClick="anadirContacto(document.getElementById('nombre').value, document.getElementById('telefono').value);"><img align="top" src="imagenes/anadir.png" width="24" height="24">&nbsp;AÑADIR</button></td>
+				<td><button type="submit" name="eliminar" class="boton" value="ELIMINAR" onClick="eliminarContacto(document.getElementById('nombre').value);"><img align="top" src="imagenes/eliminar.png" width="24" height="24">&nbsp;ELIMINAR</button></td>
+				<td><button type="submit" name="actualizar" class="boton" value="ACTUALIZAR" onClick="actualizarContacto(document.getElementById('nombre').value, document.getElementById('telefono').value);"><img align="top" src="imagenes/actualizar.png" width="24" height="24">&nbsp;ACTUALIZAR</button></td>
+			</tr>
+			<tr>
+				<td colspan="2" rowspan="2"></td>
+				<td rowspan="2"><button type="submit" name="importar" class="boton" value="IMPORTAR" onClick="importarContactos(document.getElementById('fichero'), document.getElementById('sobreescribir').checked);"><img align="top" src="imagenes/subir.png" width="24" height="24">&nbsp;IMPORTAR</button></td>
+				<td><input type="file" name="fichero" id="fichero" class="boton" value="IMPORTAR"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="sobreescribir" id="sobreescribir" value="sobreescribir"><span class="boton">Sobreescribir</span></td>
+			</tr>
+		</table>
+	
+	<hr width="455" align="left">
+	<br>
+	
+	<div id="resultado" style="max-width:450px;">
+	</div>
+	
+</body>
+</html>

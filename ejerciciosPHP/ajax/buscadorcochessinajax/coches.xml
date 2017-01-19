@@ -1,0 +1,127 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE Coches [
+   <!ELEMENT Coches (Coche*)>
+   <!ELEMENT Coche (ID, Marca, Modelo, Motor, Año, Km, Precio, Descripcion, URLImagen)>
+   <!ELEMENT ID (#PCDATA)>
+   <!ELEMENT Marca (#PCDATA)>
+   <!ELEMENT Modelo (#PCDATA)>
+   <!ELEMENT Motor (#PCDATA)>
+   <!ELEMENT Año (#PCDATA)>   
+   <!ELEMENT Km (#PCDATA)>
+   <!ELEMENT Precio (#PCDATA)>
+   <!ELEMENT Descripcion (#PCDATA)>
+   <!ELEMENT URLImagen (#PCDATA)>
+]>
+
+<Coches>
+	<Coche>
+		<ID>1</ID>
+		<Marca>Mercedes</Marca>
+		<Modelo>GLA</Modelo>
+		<Motor>Diesel</Motor>
+		<Año>2014</Año>
+		<Km>18000</Km>
+		<Precio>29000</Precio>
+		<Descripcion>Poco uso. Llantas de aleación. Todos los extras.</Descripcion>
+		<URLImagen>https://c4d709dd302a2586107d-f8305d22c3db1fdd6f8607b49e47a10c.ssl.cf1.rackcdn.com/thumbnails/stock-images/07e7d2b4c767b8453d3cb0ba46808570.png</URLImagen>
+	</Coche>
+	<Coche>
+		<ID>2</ID>
+		<Marca>Mercedes</Marca>
+		<Modelo>A180</Modelo>
+		<Motor>Gasolina</Motor>
+		<Año>2013</Año>
+		<Km>52000</Km>
+		<Precio>20500</Precio>
+		<Descripcion>Todos los extras. Excelente estado. Pocos Km.</Descripcion>
+		<URLImagen>http://corporativo.rhodiumcar.com/img/grupos/VV.png</URLImagen>
+	</Coche>	
+	<Coche>
+		<ID>3</ID>
+		<Marca>Audi</Marca>
+		<Modelo>Q3</Modelo>
+		<Motor>Gasolina</Motor>
+		<Año>2015</Año>
+		<Km>62000</Km>
+		<Precio>24300</Precio>
+		<Descripcion>Pintura metalizada. Llantas de aleación. Climatizador. Buen estado de conservación.</Descripcion>
+		<URLImagen>http://www.autodato.com/wp-content/uploads/2013/09/Audi-Q3-1.png</URLImagen>
+	</Coche>	
+	<Coche>
+		<ID>4</ID>
+		<Marca>Audi</Marca>
+		<Modelo>A4</Modelo>
+		<Motor>Diesel</Motor>
+		<Año>2014</Año>
+		<Km>55000</Km>
+		<Precio>20500</Precio>
+		<Descripcion>Techo solar. Llantas de aleación. Un único propietario.</Descripcion>
+		<URLImagen>http://st.motortrend.com/uploads/sites/10/2015/11/2016-audi-a4-premium-sedan-angular-front1.png</URLImagen>
+	</Coche>	
+	<Coche>
+		<ID>5</ID>
+		<Marca>Audi</Marca>
+		<Modelo>A3</Modelo>
+		<Motor>Diesel</Motor>
+		<Año>2013</Año>
+		<Km>90000</Km>
+		<Precio>17000</Precio>
+		<Descripcion>Tres puertas. Llantas de aleación y pintura metalizada. Siempre en garaje.</Descripcion>
+		<URLImagen>http://www.audizentrum.com.ar/wp-content/uploads/2012/11/Audi-A3.png</URLImagen>
+	</Coche>	
+	<Coche>
+		<ID>6</ID>
+		<Marca>BMW</Marca>
+		<Modelo>Serie4</Modelo>
+		<Motor>Diesel</Motor>
+		<Año>2015</Año>
+		<Km>65000</Km>
+		<Precio>27000</Precio>
+		<Descripcion>Cinco puertas. Llantas de aleación y tapicería de cuero. Un único propietario.</Descripcion>
+		<URLImagen>http://gasp.com/wp-content/uploads/2015/06/serie4.png</URLImagen>
+	</Coche>
+	<Coche>
+		<ID>7</ID>
+		<Marca>BMW</Marca>
+		<Modelo>X1</Modelo>
+		<Motor>Gasolina</Motor>
+		<Año>2015</Año>
+		<Km>42000</Km>
+		<Precio>22500</Precio>
+		<Descripcion>Cinco puertas. Techo solar, llantas y climatizador. Todas las revisiones en la casa.</Descripcion>
+		<URLImagen>https://c4d709dd302a2586107d-f8305d22c3db1fdd6f8607b49e47a10c.ssl.cf1.rackcdn.com/thumbnails/stock-images/c3b31cb05f5e0d3e53bd052c2fff7a9d.png</URLImagen>
+	</Coche>	
+	<Coche>
+		<ID>8</ID>
+		<Marca>BMW</Marca>
+		<Modelo>Serie1</Modelo>
+		<Motor>Gasolina</Motor>
+		<Año>2015</Año>
+		<Km>25000</Km>
+		<Precio>17000</Precio>
+		<Descripcion>Tres puertas. Un único propietario. Todas las revisiones en la casa.</Descripcion>
+		<URLImagen>https://www.europcar.es/carvisuals/270x180/15495_GWY_R.png</URLImagen>
+	</Coche>	
+	<Coche>
+		<ID>9</ID>
+		<Marca>HONDA</Marca>
+		<Modelo>CRV</Modelo>
+		<Motor>Diesel</Motor>
+		<Año>2016</Año>
+		<Km>37000</Km>
+		<Precio>29400</Precio>
+		<Descripcion>4x4. Todos los extras. Pocos kilómetros. Siempre en garaje.</Descripcion>
+		<URLImagen>https://s3.amazonaws.com/fzautomotive/dealers/566f47653a603.png</URLImagen>
+	</Coche>
+	<Coche>
+		<ID>10</ID>
+		<Marca>HONDA</Marca>
+		<Modelo>Civic</Modelo>
+		<Motor>Gasolina</Motor>
+		<Año>2013</Año>
+		<Km>85000</Km>
+		<Precio>16500</Precio>
+		<Descripcion>Todos los extras. Pocos kilómetros. Siempre en garaje.</Descripcion>
+		<URLImagen>http://www.honda.es/content/dam/central/cars/civic-hatchback-2015/honda-civic-2015-specs16x9.png/_jcr_content/renditions/c2.png</URLImagen>
+	</Coche>
+</Coches>

@@ -1,0 +1,53 @@
+		.logo { 
+			font-family:courier; 
+			font-size:38px; 
+			color:#AA0000; 
+			font-weight:bold; 
+		}
+		
+		.principal { 
+			font-family:arial; 
+			font-size:18px; 
+			color:#0000DD; 
+		}
+		
+		.titulo { 
+			font-family:verdana; 
+			font-size:15px; 
+			color:#0000DD; 
+		}
+		
+		.tabla {
+			font-family:verdana; 
+			font-size:15px; 
+			color:#0000DD; 
+			border-collapse:collapse; 
+			border:1px solid black; 
+			width:525px; 
+			text-align:center; 
+			background:#CCCCCC;
+		}
+		
+		.resaltado { 
+			font-family:arial; 
+			font-size:24px; 
+			color:#222255; 
+			font-weight:bold; 
+		}
+		
+		.texto  { 
+			font-family:arial; 
+			font-size:14px; 
+			color:#222255; 
+		}
+		
+		.boton { 
+			height:30px; 
+			width:140px; 
+			border-radius:2px 2px 2px 2px; 
+			border:1px solid #00DDEE; 
+			background:#22BBFF; 
+			font-family:Arial; 
+			font-size:14px; 
+			color:#FFFFFF; 
+		}
