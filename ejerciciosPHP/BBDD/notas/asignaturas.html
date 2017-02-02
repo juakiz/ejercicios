@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="estilos.css">	
+		
+		<script language="javascript" type="text/javascript">
+
+			function filaMouseOver (fila) {
+				fila.style.backgroundColor = '#EDEDFF';
+			}
+
+			function filaMouseOut (fila) {
+				fila.style.backgroundColor = '#DDDDEE';
+			}
+			
+			function inicio () {
+				listarAsignaturas("divListarAsignaturas", "listarAsignaturas");
+				listarAsignaturas("divEliminarAsignaturas", "eliminarAsignaturas");
+				var asignatura = document.getElementById("listarAsignaturas").value;
+				buscarAlumnos(asignatura);
+			}
+			
+			function listarAsignaturas (divId, Id) {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+								document.getElementById(divId).innerHTML = this.responseText;
+	
+							}
+							
+						}
+					};
+				xhr.open("POST", "asignaturas.php", false);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var parametros = "accion=listar" + "&Id=" + Id;
+				xhr.send(parametros);
+			}
+			
+			function buscarAlumnos (asignatura) {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+								document.getElementById('divAlumnos').innerHTML = this.responseText;
+							}
+							
+						}
+					};
+				xhr.open("POST", "asignaturas.php", true);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var parametros = "accion=buscar" + "&asignatura=" + asignatura;
+				xhr.send(parametros);	
+			}
+			
+			function anadirAsignatura (asignatura) {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+								document.getElementById('divAlumnos').innerHTML = this.responseText;
+								listarAsignaturas("divListarAsignaturas", "listarAsignaturas");
+								listarAsignaturas("divEliminarAsignaturas", "eliminarAsignaturas");	
+								document.getElementById("listarAsignaturas").value = asignatura;
+							}
+							
+						}
+					};
+				xhr.open("POST", "asignaturas.php", true);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var parametros = "accion=anadir" + "&asignatura=" + asignatura;
+				xhr.send(parametros);
+			}
+			
+			function eliminarAsignatura (asignatura) {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+								document.getElementById('divAlumnos').innerHTML = this.responseText;
+								inicio();								
+							}
+							
+						}
+					};
+				xhr.open("POST", "asignaturas.php", true);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var parametros = "accion=eliminar" + "&asignatura=" + asignatura;
+				xhr.send(parametros);	
+			}
+			
+			function modificarMatricula (alumno, asignatura, matriculado) {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+							
+								document.getElementById('aaaa').innerHTML = this.responseText;
+							}
+							
+						}
+					};
+				xhr.open("POST", "asignaturas.php", true);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var parametros = "accion=modificar" + "&alumno=" + alumno + "&asignatura=" + asignatura + "&matriculado=" + matriculado;
+				xhr.send(parametros);
+			}			
+		</script>
+</head>
+<body bgcolor="#DDDDDD" onLoad="inicio();">
+	<br>
+	<div style="position:absolute; left:10px; top:10px; width:160px;">
+		<table style="border: 1px solid black; background:#CCCCCC; height:90px; width:145px;" border="0" cellpadding="3">
+			<tr valign="top" >
+				<td class="titulo">
+				  Listar alumnos de asignatura:
+				</td>
+			</tr>
+			<tr>
+				<td class="texto">
+					<div id="divListarAsignaturas">
+					</div>
+				</td>
+			</tr>
+			<tr><td></td><td></td><td></td><td></td></tr>
+		</table>
+	</div>
+	
+	<div style="position:absolute; left:178px; top:10px; width:180px;">
+		<table style="border: 1px solid black; background:#CCCCCC; height:92px; width:175px;" border="0" cellpadding="3">
+			<tr valign="top" height="40">
+				<td class="titulo" colspan="2">
+				  Eliminar asignatura:
+				</td>
+			</tr>
+			<tr>
+				<td class="texto">
+					<div id="divEliminarAsignaturas">
+					</div>
+				</td>
+				<td>
+					<img src="imagenes/eliminar.png" width="24" height="24" onClick="eliminarAsignatura(document.getElementById('eliminarAsignaturas').value);" onMouseEnter="this.style.backgroundColor='#EEEEEE';" onMouseOut="this.style.backgroundColor='#CCCCCC';">
+				</td>
+			</tr>
+			<tr><td></td><td></td><td></td><td></td></tr>
+		</table>
+	</div>
+	
+	<div style="position:absolute; left:370px; top:10px; width:160px;">
+		<table style="border: 1px solid black; background:#CCCCCC; height:92px; width:165px;" border="0" cellpadding="3">
+			<tr valign="top" height="40">
+				<td class="titulo" colspan="2">
+				  Añadir asignatura:
+				</td>
+			</tr>
+			<tr>
+				<td class="texto">
+					<input type="text" id="asignatura" maxlength="10" class="tabla" style="width:100px; text-align:left;">
+				</td>
+				<td>
+					<img src="imagenes/anadir.png" width="24" height="24" onClick="anadirAsignatura(document.getElementById('asignatura').value);" onMouseEnter="this.style.backgroundColor='#EEEEEE';" onMouseOut="this.style.backgroundColor='#CCCCCC';">
+				</td>
+			</tr>
+			<tr><td></td><td></td><td></td><td></td></tr>
+		</table>
+	</div>
+		
+	<div id="divAlumnos" style="position:absolute; left:10px; top:110px; width:510px;">
+	</div>
+
+	<div id="aaaa">
+	</div>
+</body>
+</html>

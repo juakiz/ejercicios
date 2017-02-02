@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="estilos.css">	
+		
+		<script language="javascript" type="text/javascript">
+			function filaMouseOver (fila) {
+				fila.style.backgroundColor = '#EDEDFF';
+			}
+
+			function filaMouseOut (fila) {
+				fila.style.backgroundColor = '#DDDDEE';
+			}
+			
+			function inicio () {
+				listarAsignaturas();
+				var asignatura = document.getElementById("asignatura").value;
+				buscarAlumnos(asignatura, "TODOS");
+			}
+			
+			function listarAsignaturas () {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+								document.getElementById('divAsignaturas').innerHTML = this.responseText;
+							}
+							
+						}
+					};
+				xhr.open("POST", "notas.php", false);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var parametros = "accion=listar";
+				xhr.send(parametros);
+			}
+			
+			function buscarAlumnos (asignatura) {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+								document.getElementById('divNotas').innerHTML = this.responseText;
+							}
+							
+						}
+					};
+				xhr.open("POST", "notas.php", true);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var nota;
+				if (document.getElementById("TODOS").checked)
+					nota = "TODOS";
+				if (document.getElementById("aprobados").checked)
+					nota = "aprobados";
+				if (document.getElementById("suspensos").checked)
+					nota = "suspensos";
+				var parametros = "accion=buscar" + "&asignatura=" + asignatura + "&nota=" + nota;
+				xhr.send(parametros);	
+			}
+			
+			function modificarNota (alumno, asignatura, nota) {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+								document.getElementById('divNotas').innerHTML = this.responseText;
+							}
+							
+						}
+					};
+				xhr.open("POST", "notas.php", true);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var listar;
+				if (document.getElementById('TODOS').checked)
+					listar = document.getElementById('TODOS').value;
+				if (document.getElementById('aprobados').checked)
+					listar = document.getElementById('aprobados').value;
+				if (document.getElementById('suspensos').checked)
+					listar = document.getElementById('suspensos').value;
+				var parametros = "accion=modificar" + "&alumno=" + alumno + "&asignatura=" + asignatura + "&nota=" + nota + "&listar=" + listar;
+				xhr.send(parametros);
+			}
+			
+		</script>
+</head>
+<body bgcolor="#DDDDDD" onLoad="inicio();"> 	
+	<div style="position:absolute; left:10px; top:10px; width:130px;">
+		<table style="border: 1px solid black; background:#CCCCCC; width:130px; height:95px;" border="0" cellpadding="3">
+			<tr>
+				<td class="titulo">
+				  Listar notas de la asignatura:
+				</td>
+			</tr>
+			<tr>
+				<td class="texto">
+					<div id="divAsignaturas">
+					</div>
+				</td>
+			</tr>
+			<tr><td></td><td></td><td></td><td></td></tr>
+		</table>
+	</div>
+	
+	<div style="position:absolute; left:200px; top:10px; width:350px;">
+		<table style="border: 1px solid black; background:#CCCCCC; width:335px; height:95px;" border="0" cellpadding="3">
+			<tr>
+				<td class="titulo" colspan="3">
+				  Listar alumnos:
+				</td>
+			</tr>
+			<tr>
+				<td class="texto" style="color:#222255;">
+				  <input id ="TODOS" type="radio" name="nota" value="TODOS" checked onClick="buscarAlumnos(document.getElementById('asignatura').value)"> TODOS
+				</td>
+				<td class="texto" style="color:green;">
+				  <input id ="aprobados" type="radio" name="nota" value="aprobados" onClick="buscarAlumnos(document.getElementById('asignatura').value)"> Aprobados
+				</td>
+				<td class="texto" style="color:red;">
+				  <input id ="suspensos" type="radio" name="nota" value="suspensos" onClick="buscarAlumnos(document.getElementById('asignatura').value)"> Suspensos
+				</td>
+			</tr>
+			<tr><td></td><td></td><td></td><td></td></tr>
+		</table>
+	</div>
+	
+	<div id="divNotas" style="position:absolute; left:10px; top:115px; width:550px;">
+	</div>
+
+</body>
+</html>

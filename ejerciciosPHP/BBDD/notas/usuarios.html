@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="estilos.css">	
+		
+		<script language="javascript" type="text/javascript">
+		
+			function filaMouseOver (fila) {
+				fila.style.backgroundColor = '#EDEDFF';
+			}
+
+			function filaMouseOut (fila) {
+				fila.style.backgroundColor = '#DDDDEE';
+			}
+			
+			function inicio () {
+				buscarUsuarios("TODOS");
+			}
+			
+			function buscarUsuarios (tipo) {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+								document.getElementById('divUsuarios').innerHTML = this.responseText;
+							}
+							
+						}
+					};
+				xhr.open("POST", "usuarios.php", true);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var parametros = "accion=buscar" + "&tipo=" + tipo;
+				xhr.send(parametros);	
+			}
+			
+			function anadirUsuario (usuario, clave, tipo, tipoListar) {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+								document.getElementById('divUsuarios').innerHTML = this.responseText;
+							}
+							
+						}
+					};
+				xhr.open("POST", "usuarios.php", true);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var parametros = "accion=anadir" + "&usuario=" + usuario + "&clave=" + clave + "&tipo=" + tipo + "&tipoListar=" + tipoListar;
+				xhr.send(parametros);
+			}
+			
+			function eliminarUsuario (usuario, tipo) {
+				var xhr	= new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+							if (this.responseText.includes('Error')) {
+								alert(this.responseText);
+							} else {
+								document.getElementById('divUsuarios').innerHTML = this.responseText;
+							}
+							
+						}
+					};
+				xhr.open("POST", "usuarios.php", true);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var parametros = "accion=eliminar" + "&usuario=" + usuario + "&tipo=" + tipo;
+				xhr.send(parametros);	
+			}
+		</script>
+</head>
+<body bgcolor="#DDDDDD" onLoad="inicio();"> 
+	<br>
+	<div style="position:absolute; left:10px; top:10px; width:170px;">
+		<table style="border: 1px solid black; background:#CCCCCC; height:105px; width:150px;" border="0" cellpadding="3">
+			<tr valign="top" height="55">
+				<td class="titulo">
+				  Listar usuarios de tipo:
+				</td>
+			</tr>
+			<tr>
+				<td class="texto">
+					<select id="tipoListar" class="tabla" style="width:120px; font-size:20px;" onChange="buscarUsuarios(this.value);">
+						<option value="TODOS">TODOS</option>						
+						<option value="alumno">Alumno</option>
+						<option value="profesor">Profesor</option>		
+					</select>
+				</td>
+			</tr>
+			<tr><td></td><td></td><td></td><td></td></tr>
+		</table>
+	</div>
+	
+	<div style="position:absolute; left:180px; top:10px;">
+		<table style="border: 1px solid black; background:#CCCCCC; height:105px; width:355px;" border="0" cellpadding="5">
+			<tr>
+				<td class="titulo" colspan="4">
+				  Añadir usuario:
+				</td>
+			</tr>
+			<tr>
+				<td class="texto" width="96">Tipo:</td>
+				<td class="texto" width="96">Usuario:</td>
+				<td class="texto" width="96">Clave:</td>
+				<td width="50"></td>
+			</tr>
+			<tr>
+				<td>
+					<select id="tipo" class="tabla" style="width:85px; text-align:left;">
+						<option value="Alumno">Alumno</option>
+						<option value="Profesor">Profesor</option>		
+					</select>
+				</td>
+				<td>
+					<input type="text" id="usuario" class="tabla" maxlength="10" style="width:85px; text-align:left;">
+				</td>
+				<td>
+					<input type="password" id="clave" class="tabla" maxlength="10" style="width:85px; text-align:left;">
+				</td>
+				<td>
+					<img src="imagenes/anadir.png" width="24" height="24" onClick="anadirUsuario(document.getElementById('usuario').value,
+																								 document.getElementById('clave').value,
+																								 document.getElementById('tipo').value,
+																								 document.getElementById('tipoListar').value);" 
+						onMouseEnter="this.style.backgroundColor='#EEEEEE';" onMouseOut="this.style.backgroundColor='#CCCCCC';">
+				</td>
+			</tr>
+		</table>
+	</div>
+		
+	<div id="divUsuarios" style="position:absolute; left:10px; top:120px; width:510px;">
+	</div>
+
+</body>
+</html>
