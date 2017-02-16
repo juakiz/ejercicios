@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+<script language="JavaScript">
+function a(x,y) {
+   /* Función que calcula el área de un triángulo pasando la base  y la altura. */
+   return (parseFloat(x)*parseFloat(y)/2);
+}
+function ab (xx,yy){
+	var resultado = a(xx,yy);
+	document.getElementById("area").value=resultado;
+}
+</script>
+</head>
+<BODY>
+Examen 2EVAL DOR
+<form>
+<br>
+Base: <INPUT TYPE="text" SIZE="5" NAME="bas" id="bas">
+<br>
+Altura: <INPUT TYPE="text" SIZE="5" NAME="alt" onchange="ab(this.value,document.getElementById('bas').value);">
+<br>
+<br>
+Área: <INPUT TYPE="text" SIZE="10" id="area">
+</form>
+</body>
+</html>

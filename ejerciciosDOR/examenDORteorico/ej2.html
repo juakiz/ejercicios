@@ -1,0 +1,11 @@
+<body>
+  <form  name='form_examen'>
+  	<input type="text" name="fname" value="Hola" onchange="muestra(this.value)"><br>
+  </form>
+  <p id="parrafo"></p>
+</body>
+<script>
+	function muestra (texto){
+		document.getElementById('parrafo').innerHTML = texto;
+	}
+</script>
